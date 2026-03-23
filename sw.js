@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Beauty Studio Ange & Kay 
+// sw.js - Service Worker para Anita’sNailstudio
 
-const CACHE_NAME = 'beauty-studio-ange-kay--v1';
+const CACHE_NAME = 'anitasnailstudio-v1';
 const urlsToCache = [
-  '/beauty-studio-ange-kay-/',
-  '/beauty-studio-ange-kay-/index.html',
-  '/beauty-studio-ange-kay-/admin.html',
-  '/beauty-studio-ange-kay-/admin-login.html',
-  '/beauty-studio-ange-kay-/setup-wizard.html',
-  '/beauty-studio-ange-kay-/editar-negocio.html',
-  '/beauty-studio-ange-kay-/manifest.json',
-  '/beauty-studio-ange-kay-/icons/icon-72x72.png',
-  '/beauty-studio-ange-kay-/icons/icon-96x96.png',
-  '/beauty-studio-ange-kay-/icons/icon-128x128.png',
-  '/beauty-studio-ange-kay-/icons/icon-144x144.png',
-  '/beauty-studio-ange-kay-/icons/icon-152x152.png',
-  '/beauty-studio-ange-kay-/icons/icon-192x192.png',
-  '/beauty-studio-ange-kay-/icons/icon-384x384.png',
-  '/beauty-studio-ange-kay-/icons/icon-512x512.png'
+  '/anitasnailstudio/',
+  '/anitasnailstudio/index.html',
+  '/anitasnailstudio/admin.html',
+  '/anitasnailstudio/admin-login.html',
+  '/anitasnailstudio/setup-wizard.html',
+  '/anitasnailstudio/editar-negocio.html',
+  '/anitasnailstudio/manifest.json',
+  '/anitasnailstudio/icons/icon-72x72.png',
+  '/anitasnailstudio/icons/icon-96x96.png',
+  '/anitasnailstudio/icons/icon-128x128.png',
+  '/anitasnailstudio/icons/icon-144x144.png',
+  '/anitasnailstudio/icons/icon-152x152.png',
+  '/anitasnailstudio/icons/icon-192x192.png',
+  '/anitasnailstudio/icons/icon-384x384.png',
+  '/anitasnailstudio/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/beauty-studio-ange-kay-/icons/icon-192x192.png');
+            return caches.match('/anitasnailstudio/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Beauty Studio Ange & Kay ');
+console.log('✅ Service Worker configurado para Anita’sNailstudio');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

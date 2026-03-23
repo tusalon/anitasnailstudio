@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Beauty Studio Ange & Kay 
+// CLIENTE: Anita’sNailstudio
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = 'd52923b4-1fcd-4718-9775-cf386f4ba010'; // ID de Beauty Studio Ange & Kay 
+const NEGOCIO_ID_POR_DEFECTO = '34bde163-c75c-4d16-8491-7635ef04aa85'; // ID de Anita’sNailstudio
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Beauty Studio Ange & Kay ';
+    return config?.nombre || 'Anita’sNailstudio';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '53348350';
+    return config?.telefono || '55400198';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'Claudiatexidohernandez@gmail.com';
+    return config?.email || 'anaelislio@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Beauty Studio Ange & Kay !';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Anita’sNailstudio!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'beauty-studio-ange-kay-';
+    return config?.ntfy_topic || 'anitasnailstudio';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Beauty Studio Ange & Kay ');
+console.log('✅ config-negocio.js listo para Anita’sNailstudio');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
